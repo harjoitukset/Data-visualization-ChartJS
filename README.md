@@ -1,50 +1,48 @@
-# Chart.js Web Application
+# Chart.js Web-sovellus
 
-This is a simple web application that utilizes Chart.js to create interactive charts. The application is structured to separate concerns between HTML, JavaScript, and CSS.
+Tämä on yksinkertainen web-sovellus, joka hyödyntää Chart.js-kirjastoa interaktiivisten kaavioiden luomiseen. Sovellus on rakennettu siten, että HTML, JavaScript ja CSS on eroteltu omiin tiedostoihinsa.
 
-## Project Structure
+## Projektin rakenne
 
 ```
 Data-visualization-ChartJS
 ├── public
-│   └── index.html          # Main HTML file
+│   └── index.html          # Pääasiallinen HTML-tiedosto
 ├── src
-│   ├── app.js              # Main JavaScript file
-│   ├── components
-│   │   └── ChartComponent.js # Component for rendering charts
+│   ├── app.js              # Pääasiallinen JavaScript-tiedosto
+│   ├── components          # Komponentit
+kaavioiden näyttämiseen
 │   └── styles
-│       └── main.css        # CSS styles for the application
-├── package.json             # npm configuration file
-└── README.md                # Project documentation
+│       └── main.css        # Appin CSS-tyylit
+├── package.json            # npm-konfiguraatiot
+└── README.md               # Appin dokumentaatio
 ```
 
-## Getting Started
+## Aloitusohjeet
 
-To get started with this project, follow these steps:
+Aloittaaksesi projektin käytön, toimi seuraavasti:
 
-1. **Clone the repository:**
+1. **Kloonaa repositorio:**
    ```
    git clone <repository-url>
    cd chartjs-web-app
    ```
 
-2. **Install dependencies:**
+2. **Asenna riippuvuudet:**
    ```
    npm install
    ```
 
-3. **Run the application:**
+3. **Käynnistä sovellus:**
    ```
    npm start
    ```
 
-4. **Open your browser:**
-   Navigate to `http://localhost:3000` to view the application.
+4. **Avaa selain:**
+   Siirry osoitteeseen `http://localhost:8080` nähdäksesi sovelluksen.
 
-## Usage
+## Käyttö
 
-The application allows you to create and display various types of charts using Chart.js. You can modify the `src/components/ChartComponent.js` file to customize the charts according to your needs.
+Sovelluksella voit luoda ja näyttää erilaisia kaavioita Chart.js:n avulla. Voit muokata tiedostoa `src/components/ChartComponent.js` räätälöidäksesi kaavioita tarpeidesi mukaan.
 
-## License
-
-This project is licensed under the MIT License.
+[Data](https://gapm.io/dl_popv8)

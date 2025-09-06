@@ -26,11 +26,7 @@ Aloittaaksesi projektin käytön, toimi seuraavasti:
 1. **Kloonaa repositorio:**
    ```
    git clone <repository-url>
-   cd Data-visualization-ChartJS-<oma-tunnus   .github/
-   ├── classroom/
-   │   └── assignment.md         # Ohjeet ja tehtävänanto opiskelijoille
-   └── workflows/
-       └── autograding.yml       # Autograding workflow-tiedosto>
+   cd Data-visualization-ChartJS-<oma-tunnus
    ```
 
 2. **Asenna riippuvuudet:**

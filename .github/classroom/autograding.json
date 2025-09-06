@@ -1,0 +1,84 @@
+{
+  "tests": [
+    {
+      "name": "Löytyykö data.csv public- tai data-kansiosta?",
+      "setup": "",
+      "run": "test -f public/data.csv || test -f data/data.csv",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 20
+    },
+    {
+      "name": "Löytyykö app.js src-kansiosta?",
+      "setup": "",
+      "run": "test -f src/app.js",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 20
+    },
+    {
+      "name": "Onko Chart.js asennettu riippuvuuksiin?",
+      "setup": "",
+      "run": "grep 'chart.js' package.json",
+      "input": "",
+      "output": "",
+      "comparison": "substring",
+      "timeout": 10,
+      "points": 20
+    },
+    {
+      "name": "Onko index.html-tiedostossa <canvas id=\"myChart\">?",
+      "setup": "",
+      "run": "grep '<canvas id=\"myChart\"' public/index.html",
+      "input": "",
+      "output": "",
+      "comparison": "substring",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Onko app.js-tiedostossa koodia, joka luo kaavion Chart.js:llä?",
+      "setup": "",
+      "run": "grep -E 'new Chart\\(|myChart' src/app.js",
+      "input": "",
+      "output": "",
+      "comparison": "substring",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Onko public/index.html-tiedostossa viittaus app.js:ään?",
+      "setup": "",
+      "run": "grep 'app.js' public/index.html",
+      "input": "",
+      "output": "",
+      "comparison": "substring",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Onko Chart.js:n dokumentaatio luettu?",
+      "setup": "",
+      "run": "test -f public/chartjs-docs.html",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "Onko käytössäsi tyylitiedosto, joka tekee kaaviosta näkyvän?",
+      "setup": "",
+      "run": "grep 'style' public/index.html",
+      "input": "",
+      "output": "",
+      "comparison": "substring",
+      "timeout": 10,
+      "points": 5
+    }
+  ]
+}

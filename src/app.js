@@ -110,4 +110,56 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
   });
+
+  fetch('data.json')
+    .then(response => response.json())
+    .then(data => {
+      // Muodostetaan data Chart.js:n scatter-tyyliin
+      const scatterData = data.map(city => ({
+        x: city["Maapinta-ala (km²)"],
+        y: city["Väkiluku"],
+        label: city["Kaupunki"]
+      }));
+
+      const chartctx = document.getElementById('scatterChart').getContext('2d');
+      new Chart(chartctx, {
+        type: 'scatter',
+        data: {
+          datasets: [{
+            label: 'Kaupungit',
+            data: scatterData,
+            backgroundColor: 'rgba(54, 162, 235, 0.6)'
+          }]
+        },
+        options: {
+          plugins: {
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  const city = scatterData[context.dataIndex];
+                  return `${city.label}: Pinta-ala ${city.x} km², Väkiluku ${city.y}`;
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              type: 'logarithmic',
+              title: {
+                display: true,
+                text: 'Maapinta-ala (km²)'
+              }
+            },
+            y: {
+              title: {
+                type: 'logarithmic',
+                display: true,
+                text: 'Väkiluku'
+              }
+            }
+          }
+        }
+      });
+    });
 });
+

@@ -1,9 +1,9 @@
 {
   "tests": [
     {
-      "name": "Löytyykö index.html public-kansiosta?",
+      "name": "Löytyykö data.csv public- tai data-kansiosta?",
       "setup": "",
-      "run": "test -f public/index.html",
+      "run": "test -f public/data.csv || test -f data/data.csv",
       "input": "",
       "output": "",
       "comparison": "exact",

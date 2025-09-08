@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Chart.js Visualization</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../src/styles/main.css">
+  <link rel="stylesheet" href="../styles/main.css">
 </head>
 <body>
   <div id="app">
@@ -21,14 +21,16 @@
         </li>
       </ul>   
     </p>
-    <h1>Line Chart</h1>
-    <canvas id="lineChart" width="400" height="200"></canvas>
+    <div class="chart-container">
+      <h1>Line Chart</h1>
+      <canvas id="lineChart" width="400" height="200"></canvas>
 
-    <h1>Bar Chart</h1>
-    <canvas id="barChart" width="400" height="200"></canvas>
+      <h1>Bar Chart</h1>
+      <canvas id="barChart" width="400" height="200"></canvas>
 
-    <h1>Scatter Plot Chart</h1>
-    <canvas id="scatterChart" width="400" height="200"></canvas>
+      <h1>Scatter Chart</h1>
+      <canvas id="scatterChart" width="400" height="200"></canvas>
+    </div>
   </div>
   <script src="/bundle.js"></script>
 </body>

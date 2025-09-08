@@ -59,10 +59,41 @@ Aloittaaksesi projektin käytön, toimi seuraavasti:
 7. **Uusi canvas-elementti viivadiagrammille:**
    Nimeä myChart nimellä oleva komponentti barChart:iksi ja tee uusi canvas-elementti `<canvas id="lineChart" width="400" height="200">`, johon piirretään viivadiagrammi sovelluksen JavaScript-koodissa.
 
-8. **Muokkaa ja käytä JSON-dataa:**
+8. **Käytä D3-kirjastoa CSV-tiedoston parsimiseen**
+   D3 on kattava kirjasto laajojen raportointi sovellusten tekemiseen. Tässä tehtävässä tarvitaan kirjastosta CSV-tiedoston parsintaan funktiota. Tuo D3-kirjasto mukaan projektiin:
+   ```
+   npm install d3
+   ```
+   Tämän jälkeen `package.json`-tiedostossa tulisi olla seuraava riippuvuus
+   ```
+   "dependencies": {
+     "chart.js": "^3.7.0",
+     "d3": "^7.9.0"
+   }
+   ```
+   Sekä lisäksi `app.js`-tiedostoon tms. alkuun import-komennolla esimerkiksi:
+   `import * as d3 from 'd3';`
+
+   Seuraavan koodin avulla saat varmistettua että HTML-tiedostosta muodostettava DOM-puu on kokonaisuudessaan luettu ja poimittua CSV-tiedostosta numeerisen datan ja X-akselille tarvittavat vuodet:
+   ```document.addEventListener('DOMContentLoaded', () => {
+      const semicolonParser = d3.dsvFormat(";");
+
+      fetch('data.csv')
+         .then(response => response.text())
+         .then(text => {
+            const data = semicolonParser.parse(text);
+            const years = Object.keys(data[0]).filter(k => /^\d{4}$/.test(k));
+         ...
+         });
+      });
+   ```
+   
+   
+
+9. **Muokkaa ja käytä JSON-dataa:**
    Lataa Suomen kaupunkien tiedot (väkiluku, pinta-ala jne.) esimerkiksi Wikipedia-sivulta [https://fi.wikipedia.org/wiki/Luettelo_Suomen_kaupungeista](https://fi.wikipedia.org/wiki/Luettelo_Suomen_kaupungeista). Tallenna tiedot JSON-muotoon tiedostoon `data.json` ja sijoita se `public`-kansioon. Voit käyttää tätä dataa esimerkiksi scatter plot -kaavion piirtämiseen Chart.js:llä, jossa vertaillaan kaupunkien pinta-alaa ja väkilukua.
 
-9. **Käytä JSON-muotoista dataa:**
+10. **Käytä JSON-muotoista dataa:**
    Data tiedostossa [data.json](./data.json) on parsittu osoitteesta [https://fi.wikipedia.org/wiki/Luettelo_Suomen_kaupungeista](https://fi.wikipedia.org/wiki/Luettelo_Suomen_kaupungeista). Data on lisensoitu Creative Commons Attribution/Share-Alike -lisenssillä. Käytä tätä JSON-muotoista dataa kaavioiden piirtämiseen Chart.js:n avulla.
 
 

@@ -21,9 +21,9 @@
       "points": 20
     },
     {
-      "name": "Onko Chart.js asennettu riippuvuuksiin?",
+      "name": "Onko D3 asennettu riippuvuuksiin?",
       "setup": "",
-      "run": "grep 'chart.js' package.json",
+      "run": "grep 'd3' package.json",
       "input": "",
       "output": "",
       "comparison": "substring",
@@ -34,16 +34,6 @@
       "name": "Onko index.html-tiedostossa canvas id:llä \"lineChart\">?",
       "setup": "",
       "run": "grep '<canvas id=\"lineChart\"' public/index.html",
-      "input": "",
-      "output": "",
-      "comparison": "substring",
-      "timeout": 10,
-      "points": 10
-    },
-    {
-      "name": "Onko app.js-tiedostossa koodia, joka luo kaavion Chart.js:llä?",
-      "setup": "",
-      "run": "grep -E 'new Chart\\(|barChart' src/app.js",
       "input": "",
       "output": "",
       "comparison": "substring",
@@ -68,17 +58,17 @@
       "output": "",
       "comparison": "substring",
       "timeout": 10,
-      "points": 5
+      "points": 10
     },
     {
-      "name": "Onko chartDrawer.js-tiedostossa käytössä medianY-niminen immutable-muuttuja?",
+      "name": "Onko chartDrawer.js-tiedostossa käytössä medianY-niminen muuttuja?",
       "setup": "",
       "run": "grep 'const medianY' src/components/chartDrawer.js",
       "input": "",
       "output": "",
       "comparison": "substring",
       "timeout": 10,
-      "points": 5
+      "points": 10
     }
   ]
 }

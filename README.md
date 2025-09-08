@@ -91,7 +91,16 @@ Aloittaaksesi projektin käytön, toimi seuraavasti:
          });
       });
    ```
-   bar ja lineChart tulee olla samannimiset kuin `canvas`-elementin id HTML-sivulla. Näitä tarvitaan jokaista piirrettävää kaaviota varten omansa. 
+   bar ja lineChart tulee olla samannimiset kuin `canvas`-elementin id HTML-sivulla. Näitä tarvitaan jokaista piirrettävää kaaviota varten omansa. CSV-tiedostosta saatu data on varsin moniulotteista, koska jokaisesta maasta on jokaiselle vuodelle oma lukuarvonsa. Label on valtion nimi, X-akselille tulee vuodet ja Y-akselille tulee väkiluvut seuraavalla datan mäppäyksellä:
+   ```
+      const datasets = data.map((row, idx) => ({
+        label: row.name,
+        data: years.map(y => row[y]),
+        borderColor: `hsl(${(idx * 60) % 360}, 80%, 60%)`,
+        fill: false,
+        tension: 0.1
+      }));
+   ```
    
 
 9. **Muokkaa ja käytä JSON-dataa:**
@@ -117,7 +126,7 @@ Aloittaaksesi projektin käytön, toimi seuraavasti:
       }   
    ```
 
-10. **Kaavioiden piirtäminen omaksi komponentikseen
+10. **Kaavioiden piirtäminen omaksi komponentikseen**
 
    Tiedosto [`app.js`](src/app.js) on kasvanut kolmen kaavion piirtämisestä suureksi ja kaavion piirtäminen on selvästi erilainen toiminto kuin muu tiedostossa oleva toteutus. Tämän vuoksi kannattaa tehdä erillinen tiedosto jossa kaavioiden piirto on jaettu omiin funktioihin. Tee tiedosto `chartDrawer.js` hakemistoon `src/components` ja tee tiedostoon kolme funktiota, jotka importoit [`app.js`](src/app.js)-tiedostoon:
    ```

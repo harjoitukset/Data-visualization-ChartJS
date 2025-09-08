@@ -11,12 +11,12 @@
       "points": 20
     },
     {
-      "name": "Löytyykö app.js src-kansiosta?",
+      "name": "Löytyykö app.js src-kansiosta ja viittaus linectx?",
       "setup": "",
-      "run": "test -f src/app.js",
+      "run": "test -f src/app.js && grep 'linectx' src/app.js",
       "input": "",
       "output": "",
-      "comparison": "exact",
+      "comparison": "substring",
       "timeout": 10,
       "points": 20
     },
@@ -31,9 +31,9 @@
       "points": 20
     },
     {
-      "name": "Onko index.html-tiedostossa <canvas id=\"myChart\">?",
+      "name": "Onko index.html-tiedostossa canvas id:llä \"lineChart\">?",
       "setup": "",
-      "run": "grep '<canvas id=\"myChart\"' public/index.html",
+      "run": "grep '<canvas id=\"lineChart\"' public/index.html",
       "input": "",
       "output": "",
       "comparison": "substring",
@@ -43,7 +43,7 @@
     {
       "name": "Onko app.js-tiedostossa koodia, joka luo kaavion Chart.js:llä?",
       "setup": "",
-      "run": "grep -E 'new Chart\\(|myChart' src/app.js",
+      "run": "grep -E 'new Chart\\(|barChart' src/app.js",
       "input": "",
       "output": "",
       "comparison": "substring",
@@ -51,9 +51,9 @@
       "points": 10
     },
     {
-      "name": "Onko public/index.html-tiedostossa viittaus app.js:ään?",
+      "name": "Onko app.js-tiedostossa scatter plot -kaavion luonti?",
       "setup": "",
-      "run": "grep 'app.js' public/index.html",
+      "run": "grep 'type:.*scatter' src/app.js",
       "input": "",
       "output": "",
       "comparison": "substring",
@@ -61,19 +61,19 @@
       "points": 10
     },
     {
-      "name": "Onko Chart.js:n dokumentaatio luettu?",
+      "name": "Löytyykö chartDrawer.js components-kansiosta ja siinä funktiot drawLineChart, drawBarChart ja drawScatterChart?",
       "setup": "",
-      "run": "test -f public/chartjs-docs.html",
+      "run": "test -f src/components/chartDrawer.js && grep 'drawLineChart' src/components/chartDrawer.js && grep 'drawBarChart' src/components/chartDrawer.js && grep 'drawScatterChart' src/components/chartDrawer.js",
       "input": "",
       "output": "",
-      "comparison": "exact",
+      "comparison": "substring",
       "timeout": 10,
       "points": 5
     },
     {
-      "name": "Onko käytössäsi tyylitiedosto, joka tekee kaaviosta näkyvän?",
+      "name": "Onko chartDrawer.js-tiedostossa käytössä medianY-niminen immutable-muuttuja?",
       "setup": "",
-      "run": "grep 'style' public/index.html",
+      "run": "grep 'const medianY' src/components/chartDrawer.js",
       "input": "",
       "output": "",
       "comparison": "substring",

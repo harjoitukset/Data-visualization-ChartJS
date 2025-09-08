@@ -54,7 +54,7 @@ Aloittaaksesi projektin käytön, toimi seuraavasti:
    Data on lisensoitu [Creative Commons License CC BY 4.0](https://docs.google.com/document/d/1-RmthhS2EPMK_HIpnPctcXpB0n7ADSWnXa5Hb3PxNq4/edit?usp=sharing).
 
 6. **Käytä chart-container-tyyliä kaavioiden ympärillä:**
-   Tiedostossa `main.css` on määritelty tyyli `.chart-container`, jota tulisi käyttää kaavioiden asettelussa. Lisää `index.html`-tiedostoon uusi `<div class="chart-container">`, jonka sisälle sijoitat kaikki kaavioiden `<canvas>`-elementit. Tämä parantaa kaavioiden ulkoasua ja keskittää ne.
+   Tiedostossa [`main.css`](public/styles/main.css) on määritelty tyyli `.chart-container`, jota tulisi käyttää kaavioiden asettelussa. Lisää [`index.html`](public/index.html)-tiedostoon uusi `<div class="chart-container">`, jonka sisälle sijoitat kaikki kaavioiden `<canvas>`-elementit. Tämä parantaa kaavioiden ulkoasua ja keskittää ne.
 
 7. **Uusi canvas-elementti viivadiagrammille:**
    Nimeä myChart nimellä oleva komponentti barChart:iksi ja tee uusi canvas-elementti `<canvas id="lineChart" width="400" height="200">`, johon piirretään viivadiagrammi sovelluksen JavaScript-koodissa.
@@ -64,14 +64,14 @@ Aloittaaksesi projektin käytön, toimi seuraavasti:
    ```
    npm install d3
    ```
-   Tämän jälkeen `package.json`-tiedostossa tulisi olla seuraava riippuvuus
+   Tämän jälkeen [`package.json`](package.json)-tiedostossa tulisi olla seuraava riippuvuus
    ```
    "dependencies": {
      "chart.js": "^3.7.0",
      "d3": "^7.9.0"
    }
    ```
-   Sekä lisäksi `app.js`-tiedostoon tms. alkuun import-komennolla esimerkiksi:
+   Sekä lisäksi [`app.js`](src/app.js)-tiedostoon tms. alkuun import-komennolla esimerkiksi:
    `import * as d3 from 'd3';`
 
    Seuraavan koodin avulla saat varmistettua että HTML-tiedostosta muodostettava DOM-puu on kokonaisuudessaan luettu ja poimittua CSV-tiedostosta numeerisen datan ja X-akselille tarvittavat vuodet:

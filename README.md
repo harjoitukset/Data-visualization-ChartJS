@@ -91,8 +91,39 @@ Aloittaaksesi projektin käytön, toimi seuraavasti:
          });
       });
    ```
-   
+   bar ja lineChart tulee olla samannimiset kuin `canvas`-elementin id HTML-sivulla. Näitä tarvitaan jokaista piirrettävää kaaviota varten omansa. 
    
 
 9. **Muokkaa ja käytä JSON-dataa:**
-   Lataa Suomen kaupunkien tiedot (väkiluku, pinta-ala jne.) esimerkiksi Wikipedia-sivulta [https://fi.wikipedia.org/wiki/Luettelo_Suomen_kaupungeista](https://fi.wikipedia.org/wiki/Luettelo_Suomen_kaupungeista). Tallenna tiedot JSON-muotoon tiedostoon `data.json` ja sijoita se `public`-kansioon. Voit käyttää tätä dataa esimerkiksi scatter plot -kaavion piirtämiseen Chart.js:llä, jossa vertaillaan kaupunkien pinta-alaa ja väkilukua.
+   Lataa Suomen kaupunkien tiedot (väkiluku, pinta-ala jne.) esimerkiksi Wikipedia-sivulta [https://fi.wikipedia.org/wiki/Luettelo_Suomen_kaupungeista](https://fi.wikipedia.org/wiki/Luettelo_Suomen_kaupungeista). Tallenna tiedot JSON-muotoon tiedostoon `data.json` ja sijoita se `public`-kansioon. Voit käyttää tätä dataa esimerkiksi scatter plot -kaavion piirtämiseen Chart.js:llä, jossa vertaillaan kaupunkien pinta-alaa ja väkilukua. 
+
+   Koska Suomessa on hyvin erikokoisia kaupunkeja väkiluvultaan ja kooltaan kannattaa kaaviota luotaessa käyttää Y ja X-asteikossa logaritmista asteikkoa. Esimerkiksi näin:
+   ```
+      scales: {
+        x: {
+          type: 'logarithmic',
+          title: {
+            display: true,
+            text: 'Maapinta-ala (km²)'
+          }
+        },
+        y: {
+          type: 'logarithmic',
+          title: {
+            display: true,
+            text: 'Väkiluku'
+          }
+        }
+      }   
+   ```
+
+10. **Kaavioiden piirtäminen omaksi komponentikseen
+
+   Tiedosto [`app.js`](src/app.js) on kasvanut kolmen kaavion piirtämisestä suureksi ja kaavion piirtäminen on selvästi erilainen toiminto kuin muu tiedostossa oleva toteutus. Tämän vuoksi kannattaa tehdä erillinen tiedosto jossa kaavioiden piirto on jaettu omiin funktioihin. Tee tiedosto `chartDrawer.js` hakemistoon `src/components` ja tee tiedostoon kolme funktiota, jotka importoit [`app.js`](src/app.js)-tiedostoon:
+   ```
+   export function drawBarChart(ctx, labels, latestValues, latestYear)
+   ...
+   export function drawLineChart(ctx, years, datasets)
+   ...
+   export function drawScatterChart(ctx, scatterData)
+   ```

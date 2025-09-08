@@ -47,7 +47,7 @@ Aloittaaksesi projektin käytön, toimi seuraavasti:
    ```
 
 4. **Avaa selain:**
-   Siirry osoitteeseen `http://localhost:8080` nähdäksesi sovelluksen.
+   Siirry osoitteeseen [`http://localhost:8080`](http://localhost:8080) nähdäksesi sovelluksen.
 
 5. **Hae data:**
    Lataa tiedosto osoitteesta [https://gapm.io/dl_popv8](https://gapm.io/dl_popv8). Tiedosto sisältää maiden väkilukuja ja on XLSX-muodossa, joten avaa se Excel-ohjelmalla. Olemme kiinnostuneita välilehden **data-pop-gmv8-in-columns** datasta. Poista datasta ylimääräiset rivit: kaksi ylintä riviä sekä seitsemän alinta riviä, joissa on maanosien ja koko maailman väkiluvut. Tallenna kyseisen välilehden sisältämä data CSV-muodossa tiedostoon `data.csv`, joka sijoitetaan `public`-kansioon. Muokkaa dataa tarvittaessa, jotta voit käyttää sitä kuvaajien piirtämiseen Chart.js:n avulla.  
@@ -74,7 +74,7 @@ Aloittaaksesi projektin käytön, toimi seuraavasti:
    Sekä lisäksi [`app.js`](src/app.js)-tiedostoon tms. alkuun import-komennolla esimerkiksi:
    `import * as d3 from 'd3';`
 
-   Seuraavan koodin avulla saat varmistettua että HTML-tiedostosta muodostettava DOM-puu on kokonaisuudessaan luettu ja poimittua CSV-tiedostosta numeerisen datan ja X-akselille tarvittavat vuodet:
+   Seuraavan koodin avulla saat varmistettua että HTML-tiedostosta muodostettava DOM-puu on kokonaisuudessaan luettu ja poimittua CSV-tiedostosta numeerisen datan ja X-akselille tarvittavat vuodet. Parsimisen ja kontekstien luonnit voidaan tehdä [`app.js`](src/app.js)-tiedostossa tai jossain muussa JavaScript-tiedostossa seuraavasti:
    ```document.addEventListener('DOMContentLoaded', () => {
       const semicolonParser = d3.dsvFormat(";");
 

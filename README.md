@@ -96,8 +96,3 @@ Aloittaaksesi projektin käytön, toimi seuraavasti:
 
 9. **Muokkaa ja käytä JSON-dataa:**
    Lataa Suomen kaupunkien tiedot (väkiluku, pinta-ala jne.) esimerkiksi Wikipedia-sivulta [https://fi.wikipedia.org/wiki/Luettelo_Suomen_kaupungeista](https://fi.wikipedia.org/wiki/Luettelo_Suomen_kaupungeista). Tallenna tiedot JSON-muotoon tiedostoon `data.json` ja sijoita se `public`-kansioon. Voit käyttää tätä dataa esimerkiksi scatter plot -kaavion piirtämiseen Chart.js:llä, jossa vertaillaan kaupunkien pinta-alaa ja väkilukua.
-
-10. **Käytä JSON-muotoista dataa:**
-   Data tiedostossa [data.json](./data.json) on parsittu osoitteesta [https://fi.wikipedia.org/wiki/Luettelo_Suomen_kaupungeista](https://fi.wikipedia.org/wiki/Luettelo_Suomen_kaupungeista). Data on lisensoitu Creative Commons Attribution/Share-Alike -lisenssillä. Käytä tätä JSON-muotoista dataa kaavioiden piirtämiseen Chart.js:n avulla.
-
-

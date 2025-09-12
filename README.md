@@ -15,12 +15,12 @@ Tämä on yksinkertainen web-sovellus, joka hyödyntää Chart.js-kirjastoa inte
 Data-visualization-ChartJS
 ├── public
 │   └── index.html          # Pääasiallinen HTML-tiedosto
+│   └── styles
+│       └── main.css        # Appin CSS-tyylit
 ├── src
 │   ├── app.js              # Pääasiallinen JavaScript-tiedosto
 │   ├── components          # Komponentit jos tarvitaan
 kaavioiden näyttämiseen
-│   └── styles
-│       └── main.css        # Appin CSS-tyylit
 ├── package.json            # npm-konfiguraatiot
 └── README.md               # Appin dokumentaatio
 ```

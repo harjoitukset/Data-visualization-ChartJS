@@ -51,9 +51,9 @@
       "points": 10
     },
     {
-      "name": "Onko app.js-tiedostossa scatter plot -kaavion luonti?",
+      "name": "Onko app.js-tiedostossa scatterData -muuttuja, johon data saadaan data.json -tiedostosta?",
       "setup": "",
-      "run": "grep 'type:.*scatter' src/app.js",
+      "run": "grep 'scatterData' && grep 'data.json' src/app.js",
       "input": "",
       "output": "",
       "comparison": "substring",

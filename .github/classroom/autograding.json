@@ -21,9 +21,9 @@
       "points": 20
     },
     {
-      "name": "Onko D3 asennettu riippuvuuksiin?",
+      "name": "Onko Chart.js asennettu riippuvuuksiin?",
       "setup": "",
-      "run": "grep 'd3' package.json",
+      "run": "grep 'chart.js' package.json",
       "input": "",
       "output": "",
       "comparison": "substring",
@@ -41,9 +41,19 @@
       "points": 10
     },
     {
-      "name": "Onko app.js-tiedostossa scatter plot -kaavion luonti?",
+      "name": "Onko app.js-tiedostossa koodia, joka luo kaavion Chart.js:llä?",
       "setup": "",
-      "run": "grep 'type:.*scatter' src/app.js",
+      "run": "grep -E 'new Chart\\(|barChart' src/app.js",
+      "input": "",
+      "output": "",
+      "comparison": "substring",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Onko app.js-tiedostossa scatterData -muuttuja, johon data saadaan data.json -tiedostosta?",
+      "setup": "",
+      "run": "grep 'scatterData' && grep 'data.json' src/app.js",
       "input": "",
       "output": "",
       "comparison": "substring",
@@ -58,17 +68,17 @@
       "output": "",
       "comparison": "substring",
       "timeout": 10,
-      "points": 10
+      "points": 5
     },
     {
-      "name": "Onko chartDrawer.js-tiedostossa käytössä medianY-niminen muuttuja?",
+      "name": "Onko chartDrawer.js-tiedostossa käytössä medianY-niminen immutable-muuttuja?",
       "setup": "",
       "run": "grep 'const medianY' src/components/chartDrawer.js",
       "input": "",
       "output": "",
       "comparison": "substring",
       "timeout": 10,
-      "points": 10
+      "points": 5
     }
   ]
 }

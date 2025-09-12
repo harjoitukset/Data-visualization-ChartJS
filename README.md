@@ -6,7 +6,7 @@ Tämä on yksinkertainen web-sovellus, joka hyödyntää Chart.js-kirjastoa inte
 
 - [Chart.js](https://www.chartjs.org/): Kaavioiden piirtämiseen
 - [Webpack](https://webpack.js.org/): Projektin kokoamiseen ja kehityspalvelimeen
-- [D3.js](https://d3js.org/): Datan käsittelyyn ja
+- [D3.js](https://d3js.org/): Datan käsittelyyn ja CSV-parsimiseen
 
 
 ## Projektin rakenne

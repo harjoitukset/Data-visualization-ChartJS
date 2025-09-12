@@ -53,7 +53,7 @@
     {
       "name": "Onko app.js-tiedostossa scatterData -muuttuja, johon data saadaan data.json -tiedostosta?",
       "setup": "",
-      "run": "grep 'scatterData' && grep 'data.json' src/app.js",
+      "run": "grep 'const scatterData' src/app.js && grep 'fetch(' src/app.js",
       "input": "",
       "output": "",
       "comparison": "substring",

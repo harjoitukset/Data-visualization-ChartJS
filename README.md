@@ -143,4 +143,4 @@ Aloittaaksesi projektin käytön, toimi seuraavasti:
    ```
    npm install chartjs-plugin-trendline
    ```
-   Tee tiedostoon `chartDrawer.js` muuttuja `yMedian`, johon lasketaan mediaani suomalaisten kaupunkien väkiluvusta. Piirrä mediaani scatter plot -kaavioon.
+   Tee tiedostoon `chartDrawer.js` muuttuja `medianY`, johon lasketaan mediaani suomalaisten kaupunkien väkiluvusta. Piirrä mediaani scatter plot -kaavioon.

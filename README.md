@@ -33,7 +33,7 @@ Aloittaaksesi projektin käytön, toimi seuraavasti:
 1. **Kloonaa repositorio:**
    ```
    git clone <repository-url>
-   cd Datan-visualisointi-ChartJS-<oma-tunnus>
+   cd 4-Datan-visualisointi-ChartJS-<oma-tunnus>
    ```
 
 2. **Asenna riippuvuudet:**
@@ -137,10 +137,6 @@ Aloittaaksesi projektin käytön, toimi seuraavasti:
    export function drawScatterChart(ctx, scatterData)
    ```
 
-11. **Trendilinjojen piirtäminen**
+11. **BONUS-tehtävä: Trendilinjojen piirtäminen**
 
-   Tuo Chart.JS plug-in-kirjasto mukaan projektiin:
-   ```
-   npm install chartjs-plugin-trendline
-   ```
    Tee tiedostoon `chartDrawer.js` muuttuja `medianY`, johon lasketaan mediaani suomalaisten kaupunkien väkiluvusta. Piirrä mediaani scatter plot -kaavioon.

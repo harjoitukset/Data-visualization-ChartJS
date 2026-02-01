@@ -33,7 +33,7 @@ Aloittaaksesi projektin käytön, toimi seuraavasti:
 1. **Kloonaa repositorio:**
    ```
    git clone <repository-url>
-   cd 4-Datan-visualisointi-ChartJS-<oma-tunnus>
+   cd 4-Datan-visualisointi-ChartJS-kirjastolla-<oma-tunnus>
    ```
 
 2. **Asenna riippuvuudet:**

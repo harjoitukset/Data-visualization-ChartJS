@@ -1,12 +1,12 @@
-# Chart.js Web-sovellus
+# Datan visualisointi Chart.js ja D3
 
-Tämä on yksinkertainen web-sovellus, joka hyödyntää Chart.js-kirjastoa interaktiivisten kaavioiden luomiseen. Sovellus on rakennettu siten, että HTML ja CSS-tiedostot ovat public-kansiossa ja JavaScript-koodi on src-kansiossa.
+Tämä on yksinkertainen web-sovellus, joka hyödyntää Chart.js-kirjastoa interaktiivisten kaavioiden luomiseen. Runkosovellus on rakennettu siten, että HTML ja CSS-tiedostot ovat public-kansiossa ja JavaScript-koodi on src-kansiossa. Tässä harjoituksessa rakennat vaiheittain responsiivisen visualisointisivun.
 
 ## Käytetyt teknologiat
 
 - [Chart.js](https://www.chartjs.org/): Kaavioiden piirtämiseen
-- [Webpack](https://webpack.js.org/): Projektin kokoamiseen ja kehityspalvelimeen
 - [D3.js](https://d3js.org/): Datan käsittelyyn ja CSV-parsimiseen
+- [Webpack](https://webpack.js.org/): Projektin kokoamiseen ja kehityspalvelimeen
 
 
 ## Projektin rakenne
@@ -67,7 +67,7 @@ Aloittaaksesi projektin käytön, toimi seuraavasti:
    Tämän jälkeen [`package.json`](package.json)-tiedostossa tulisi olla seuraava riippuvuus
    ```
    "dependencies": {
-     "chart.js": "^3.7.0",
+     "chart.js": "^4.5.1",
      "d3": "^7.9.0"
    }
    ```

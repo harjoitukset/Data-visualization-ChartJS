@@ -19,8 +19,7 @@ Data-visualization-ChartJS
 │       └── main.css        # Appin CSS-tyylit
 ├── src
 │   ├── app.js              # Pääasiallinen JavaScript-tiedosto
-│   ├── components          # Komponentit jos tarvitaan
-kaavioiden näyttämiseen
+│   └── components          # Komponentit jos tarvitaan kaavioiden näyttämiseen
 ├── package.json            # npm-konfiguraatiot
 └── README.md               # Appin dokumentaatio
 ```

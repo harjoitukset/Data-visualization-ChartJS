@@ -1,64 +1,64 @@
 {
   "tests": [
     {
-      "name": "Löytyykö data.csv public- tai data-kansiosta?",
-      "setup": "",
-      "run": "test -f public/data.csv || test -f data/data.csv",
-      "input": "",
-      "output": "",
-      "comparison": "exact",
-      "timeout": 10,
-      "points": 20
-    },
-    {
-      "name": "Löytyykö app.js src-kansiosta ja viittaus linectx?",
-      "setup": "",
-      "run": "test -f src/app.js && grep 'linectx' src/app.js",
-      "input": "",
-      "output": "",
-      "comparison": "substring",
-      "timeout": 10,
-      "points": 20
-    },
-    {
-      "name": "Onko Chart.js asennettu riippuvuuksiin?",
+      "name": "4.1 Onko Chart.js asennettu riippuvuuksiin?",
       "setup": "",
       "run": "grep 'chart.js' package.json",
       "input": "",
       "output": "",
       "comparison": "substring",
-      "timeout": 10,
+      "timeout": 1,
+      "points": 10
+    },    
+    {
+      "name": "4.2 Löytyykö data.csv public- tai data-kansiosta?",
+      "setup": "",
+      "run": "test -f public/data.csv || test -f data/data.csv",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 1,
       "points": 20
     },
     {
-      "name": "Onko index.html-tiedostossa canvas id:llä \"lineChart\">?",
+      "name": "4.3 Löytyykö app.js src-kansiosta ja viittaus linectx?",
+      "setup": "",
+      "run": "test -f src/app.js && grep 'linectx' src/app.js",
+      "input": "",
+      "output": "",
+      "comparison": "substring",
+      "timeout": 1,
+      "points": 20
+    },
+    {
+      "name": "4.4 Onko index.html-tiedostossa canvas id:llä \"lineChart\">?",
       "setup": "",
       "run": "grep '<canvas id=\"lineChart\"' public/index.html",
       "input": "",
       "output": "",
       "comparison": "substring",
-      "timeout": 10,
-      "points": 10
+      "timeout": 1,
+      "points": 20
     },
     {
-      "name": "Onko app.js-tiedostossa koodia, joka luo kaavion Chart.js:llä?",
+      "name": "4.5 Onko app.js-tiedostossa koodia, joka luo kaavion Chart.js:llä?",
       "setup": "",
       "run": "grep -E 'new Chart\\(|barChart' src/app.js",
       "input": "",
       "output": "",
       "comparison": "substring",
-      "timeout": 10,
-      "points": 10
+      "timeout": 1,
+      "points": 20
     },
     {
-      "name": "Onko app.js-tiedostossa scatterData -muuttuja, johon data saadaan data.json -tiedostosta?",
+      "name": "4.6 Onko app.js-tiedostossa scatterData -muuttuja, johon data saadaan data.json -tiedostosta?",
       "setup": "",
       "run": "grep 'const scatterData' src/app.js && grep 'fetch(' src/app.js",
       "input": "",
       "output": "",
       "comparison": "substring",
-      "timeout": 10,
-      "points": 15
+      "timeout": 1,
+      "points": 10
     }
   ]
 }

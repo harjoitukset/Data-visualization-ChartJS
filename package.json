@@ -19,5 +19,8 @@
     "webpack-dev-server": "^6.0.0"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "overrides": {
+    "fast-uri": "4.1.4"
+  }
 }
